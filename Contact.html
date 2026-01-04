@@ -117,9 +117,9 @@
                             
                             <!-- Size Selection -->
                             <div class="form-group">
-                                <label for="size">Size *</label>
-                                <select class="form-control" id="size" name="Size" required>
-                                    <option value="">Select Size</option>
+                                <label for="size">Size</label>
+                                <select class="form-control" id="size" name="Size">
+                                    <option value="">Select Size (Optional)</option>
                                     <option value="XS">XS - Extra Small</option>
                                     <option value="S">S - Small</option>
                                     <option value="M">M - Medium</option>
@@ -138,6 +138,15 @@
                                         <input type="text" class="form-control" id="street" name="Street Address" required placeholder="House number and street name">
                                     </div>
                                 </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="pobox">PO Box</label>
+                                        <input type="text" class="form-control" id="pobox" name="PO Box" placeholder="Optional">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="city">City *</label>
