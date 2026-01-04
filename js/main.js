@@ -88,10 +88,87 @@ function initContactFormPopulation() {
 }
 
 // ============================================
+// PAGINATION FUNCTIONALITY
+// ============================================
+function initPagination() {
+    const productsGrid = document.querySelector('.products-grid');
+    const paginationContainer = document.getElementById('pagination');
+    
+    if (!productsGrid || !paginationContainer) return; // Exit if elements don't exist
+
+    const productCards = Array.from(productsGrid.querySelectorAll('.product-card'));
+    const itemsPerPage = 8; // Show 8 products per page
+    let currentPage = 1;
+    const totalPages = Math.ceil(productCards.length / itemsPerPage);
+
+    // Hide all products initially
+    function showPage(page) {
+        currentPage = page;
+        
+        // Hide all products
+        productCards.forEach((card, index) => {
+            card.style.display = 'none';
+        });
+        
+        // Show products for current page
+        const startIndex = (page - 1) * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+        
+        for (let i = startIndex; i < endIndex && i < productCards.length; i++) {
+            productCards[i].style.display = 'block';
+        }
+        
+        // Update pagination buttons
+        renderPagination();
+        
+        // Scroll to top of products section
+        productsGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // Render pagination buttons
+    function renderPagination() {
+        paginationContainer.innerHTML = '';
+        
+        // Previous button
+        const prevBtn = document.createElement('button');
+        prevBtn.className = 'pagination-btn' + (currentPage === 1 ? ' disabled' : '');
+        prevBtn.innerHTML = '&laquo; Previous';
+        prevBtn.disabled = currentPage === 1;
+        prevBtn.addEventListener('click', () => {
+            if (currentPage > 1) showPage(currentPage - 1);
+        });
+        paginationContainer.appendChild(prevBtn);
+        
+        // Page number buttons
+        for (let i = 1; i <= totalPages; i++) {
+            const pageBtn = document.createElement('button');
+            pageBtn.className = 'pagination-btn' + (i === currentPage ? ' active' : '');
+            pageBtn.textContent = i;
+            pageBtn.addEventListener('click', () => showPage(i));
+            paginationContainer.appendChild(pageBtn);
+        }
+        
+        // Next button
+        const nextBtn = document.createElement('button');
+        nextBtn.className = 'pagination-btn' + (currentPage === totalPages ? ' disabled' : '');
+        nextBtn.innerHTML = 'Next &raquo;';
+        nextBtn.disabled = currentPage === totalPages;
+        nextBtn.addEventListener('click', () => {
+            if (currentPage < totalPages) showPage(currentPage + 1);
+        });
+        paginationContainer.appendChild(nextBtn);
+    }
+
+    // Initialize - show first page
+    showPage(1);
+}
+
+// ============================================
 // INITIALIZE ALL FUNCTIONALITY
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
     initHamburgerMenu();
     initCartButtons();
     initContactFormPopulation();
+    initPagination();
 });
