@@ -88,6 +88,32 @@ function initContactFormPopulation() {
 }
 
 // ============================================
+// UPDATE CART ICONS AND ADD ORDER TEXT
+// ============================================
+function updateCartIcons() {
+    const cartButtons = document.querySelectorAll('.action-btn svg');
+    const cartIconPath = 'M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-1.4 5M17 13l1.4 5M9 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z';
+    
+    cartButtons.forEach(svg => {
+        const path = svg.querySelector('path');
+        if (path) {
+            path.setAttribute('d', cartIconPath);
+        }
+    });
+    
+    // Add "ORDER" text before each cart button
+    const productActions = document.querySelectorAll('.product-actions');
+    productActions.forEach(action => {
+        if (!action.querySelector('.order-text')) {
+            const orderText = document.createElement('span');
+            orderText.className = 'order-text';
+            orderText.textContent = 'Buy Now';
+            action.insertBefore(orderText, action.firstChild);
+        }
+    });
+}
+
+// ============================================
 // PAGINATION FUNCTIONALITY
 // ============================================
 function initPagination() {
@@ -167,6 +193,7 @@ function initPagination() {
 // INITIALIZE ALL FUNCTIONALITY
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
+    updateCartIcons();
     initHamburgerMenu();
     initCartButtons();
     initContactFormPopulation();
