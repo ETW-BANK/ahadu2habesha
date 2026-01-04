@@ -190,6 +190,22 @@ function initPagination() {
 }
 
 // ============================================
+// COUNTRY CODE AUTO-POPULATION
+// ============================================
+function initCountryCodeSync() {
+    const countrySelect = document.getElementById('country');
+    const countryCodeInput = document.getElementById('countryCode');
+    
+    if (countrySelect && countryCodeInput) {
+        countrySelect.addEventListener('change', function() {
+            const selectedOption = this.options[this.selectedIndex];
+            const countryCode = selectedOption.getAttribute('data-code');
+            countryCodeInput.value = countryCode || '';
+        });
+    }
+}
+
+// ============================================
 // INITIALIZE ALL FUNCTIONALITY
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
@@ -198,4 +214,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initCartButtons();
     initContactFormPopulation();
     initPagination();
+    initCountryCodeSync();
 });

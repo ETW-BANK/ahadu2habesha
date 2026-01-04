@@ -110,9 +110,75 @@
                                 </div>
                             </div>
                             
-                            <div class="form-group">
-                                <label for="phone">Phone Number *</label>
-                                <input type="tel" class="form-control" id="phone" name="Phone Number" required>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group" style="margin-right: 15px;">
+                                        <label for="country">Country *</label>
+                                        <select class="form-control" id="country" name="Country" required>
+                                            <option value="">Select Country</option>
+                                            <optgroup label="Europe">
+                                                <option value="Sweden" data-code="+46">Sweden</option>
+                                                <option value="Norway" data-code="+47">Norway</option>
+                                                <option value="Denmark" data-code="+45">Denmark</option>
+                                                <option value="Finland" data-code="+358">Finland</option>
+                                                <option value="Germany" data-code="+49">Germany</option>
+                                                <option value="France" data-code="+33">France</option>
+                                                <option value="United Kingdom" data-code="+44">United Kingdom</option>
+                                                <option value="Italy" data-code="+39">Italy</option>
+                                                <option value="Spain" data-code="+34">Spain</option>
+                                                <option value="Netherlands" data-code="+31">Netherlands</option>
+                                                <option value="Belgium" data-code="+32">Belgium</option>
+                                                <option value="Austria" data-code="+43">Austria</option>
+                                                <option value="Switzerland" data-code="+41">Switzerland</option>
+                                                <option value="Poland" data-code="+48">Poland</option>
+                                                <option value="Greece" data-code="+30">Greece</option>
+                                                <option value="Portugal" data-code="+351">Portugal</option>
+                                            </optgroup>
+                                            <optgroup label="North America">
+                                                <option value="United States" data-code="+1">United States</option>
+                                                <option value="Canada" data-code="+1">Canada</option>
+                                                <option value="Mexico" data-code="+52">Mexico</option>
+                                            </optgroup>
+                                            <optgroup label="Middle East">
+                                                <option value="Saudi Arabia" data-code="+966">Saudi Arabia</option>
+                                                <option value="United Arab Emirates" data-code="+971">United Arab Emirates</option>
+                                                <option value="Qatar" data-code="+974">Qatar</option>
+                                                <option value="Kuwait" data-code="+965">Kuwait</option>
+                                                <option value="Bahrain" data-code="+973">Bahrain</option>
+                                                <option value="Oman" data-code="+968">Oman</option>
+                                                <option value="Jordan" data-code="+962">Jordan</option>
+                                                <option value="Lebanon" data-code="+961">Lebanon</option>
+                                                <option value="Israel" data-code="+972">Israel</option>
+                                                <option value="Turkey" data-code="+90">Turkey</option>
+                                            </optgroup>
+                                            <optgroup label="Africa">
+                                                <option value="Ethiopia" data-code="+251">Ethiopia</option>
+                                                <option value="Kenya" data-code="+254">Kenya</option>
+                                                <option value="South Africa" data-code="+27">South Africa</option>
+                                                <option value="Nigeria" data-code="+234">Nigeria</option>
+                                                <option value="Egypt" data-code="+20">Egypt</option>
+                                                <option value="Morocco" data-code="+212">Morocco</option>
+                                                <option value="Tunisia" data-code="+216">Tunisia</option>
+                                                <option value="Algeria" data-code="+213">Algeria</option>
+                                                <option value="Ghana" data-code="+233">Ghana</option>
+                                                <option value="Uganda" data-code="+256">Uganda</option>
+                                                <option value="Tanzania" data-code="+255">Tanzania</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-1">
+                                    <div class="form-group" style="margin-left: 15px; margin-right: 15px; max-width: 80px;">
+                                        <label for="countryCode">Code *</label>
+                                        <input type="text" class="form-control" id="countryCode" name="Country Code" readonly required style="text-align: center;">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group" style="margin-left: 15px;">
+                                        <label for="phone">Phone Number *</label>
+                                        <input type="tel" class="form-control" id="phone" name="Phone Number" required placeholder="Enter phone number">
+                                    </div>
+                                </div>
                             </div>
                             
                             <!-- Size Selection -->
@@ -120,14 +186,66 @@
                                 <label for="size">Size</label>
                                 <select class="form-control" id="size" name="Size">
                                     <option value="">Select Size (Optional)</option>
-                                    <option value="XS">XS - Extra Small</option>
-                                    <option value="S">S - Small</option>
-                                    <option value="M">M - Medium</option>
-                                    <option value="L">L - Large</option>
-                                    <option value="XL">XL - Extra Large</option>
-                                    <option value="XXL">XXL - Double Extra Large</option>
-                                    <option value="XXXL">XXXL - Triple Extra Large</option>
+                                    <optgroup label="Clothing Sizes">
+                                        <option value="XS">XS - Extra Small</option>
+                                        <option value="S">S - Small</option>
+                                        <option value="M">M - Medium</option>
+                                        <option value="L">L - Large</option>
+                                        <option value="XL">XL - Extra Large</option>
+                                        <option value="XXL">XXL - Double Extra Large</option>
+                                        <option value="XXXL">XXXL - Triple Extra Large</option>
+                                    </optgroup>
+                                    <optgroup label="Hair Length (Inches)">
+                                        <option value="10 inches">10 inches</option>
+                                        <option value="12 inches">12 inches</option>
+                                        <option value="14 inches">14 inches</option>
+                                        <option value="16 inches">16 inches</option>
+                                        <option value="18 inches">18 inches</option>
+                                        <option value="20 inches">20 inches</option>
+                                        <option value="22 inches">22 inches</option>
+                                        <option value="24 inches">24 inches</option>
+                                        <option value="26 inches">26 inches</option>
+                                        <option value="28 inches">28 inches</option>
+                                        <option value="30 inches">30 inches</option>
+                                    </optgroup>
                                 </select>
+                            </div>
+                            
+                            <!-- Custom Measurements -->
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group" style="margin-right: 10px;">
+                                        <label for="chest">Chest/Bust (cm)</label>
+                                        <input type="text" class="form-control" id="chest" name="Chest/Bust" placeholder="Optional">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group" style="margin-left: 5px; margin-right: 5px;">
+                                        <label for="waist">Waist (cm)</label>
+                                        <input type="text" class="form-control" id="waist" name="Waist" placeholder="Optional">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group" style="margin-left: 10px;">
+                                        <label for="hips">Hips (cm)</label>
+                                        <input type="text" class="form-control" id="hips" name="Hips" placeholder="Optional">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="height">Height (cm)</label>
+                                        <input type="text" class="form-control" id="height" name="Height" placeholder="Optional">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="length">Length (cm)</label>
+                                        <input type="text" class="form-control" id="length" name="Length" placeholder="Optional - for dress/garment length">
+                                    </div>
+                                </div>
                             </div>
                             
                             <!-- Address Fields -->
@@ -140,8 +258,8 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="pobox">PO Box</label>
-                                        <input type="text" class="form-control" id="pobox" name="PO Box" placeholder="Optional">
+                                        <label for="pobox">PO Box *</label>
+                                        <input type="text" class="form-control" id="pobox" name="PO Box" required placeholder="Enter PO Box">
                                     </div>
                                 </div>
                             </div>
@@ -155,19 +273,9 @@
                                 </div>
                             </div>
                             
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="state">State/Province *</label>
-                                        <input type="text" class="form-control" id="state" name="State" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="country">Country *</label>
-                                        <input type="text" class="form-control" id="country" name="Country" required>
-                                    </div>
-                                </div>
+                            <div class="form-group">
+                                <label for="state">State/Province *</label>
+                                <input type="text" class="form-control" id="state" name="State" required>
                             </div>
                             
                             <div class="form-group">
