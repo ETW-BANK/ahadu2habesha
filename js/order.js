@@ -56,9 +56,6 @@
             // Create FormData
             var formData = new FormData(this);
             
-            // Add recipient email to form data
-            formData.append('email', 'girmatensae18@gmail.com');
-            
             // Send to Web3Forms
             fetch(this.action, {
                 method: 'POST',
@@ -94,7 +91,7 @@
             })
             .catch(error => {
                 console.error('Error:', error);
-                showMessage('error', 'Failed to send order. Please try again or contact us directly at girmatensae18@gmail.com');
+                showMessage('error', 'Failed to send order. Please try again or contact us directly at ahaduhabesha2026@gmail.com');
             })
             .finally(function() {
                 // Reset button
