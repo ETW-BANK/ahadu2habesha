@@ -1,0 +1,242 @@
+
+        .order-form-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        .form-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        .order-form {
+            background: white;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            width: 100%;
+        }
+
+        .order-form h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .order-form h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(105deg, #6394ff 0%, #ff919d 100%);
+            border-radius: 2px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: #4a5568;
+            margin-bottom: 8px;
+            font-size: 14px;
+            letter-spacing: 0.3px;
+        }
+        
+        .form-control {
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 14px 18px;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            width: 100%;
+            background-color: #f9fafb;
+        }
+        
+        .form-control:focus {
+            border-color: #6394ff;
+            box-shadow: 0 0 0 3px rgba(99, 148, 255, 0.15);
+            outline: none;
+            background-color: white;
+        }
+
+        .form-control::placeholder {
+            color: #a0aec0;
+        }
+        
+        select.form-control {
+            height: auto;
+            padding: 14px 18px;
+            background-color: #f9fafb;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236394ff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 15px center;
+            background-repeat: no-repeat;
+            background-size: 18px 14px;
+            appearance: none;
+            cursor: pointer;
+        }
+
+        select.form-control:focus {
+            background-color: white;
+        }
+        
+        .btn-order {
+            background: linear-gradient(105deg, #6394ff 0%, #ff919d 100%);
+            color: white;
+            border: none;
+            padding: 16px 40px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 20px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn-order:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(99, 148, 255, 0.4);
+            color: white;
+        }
+
+        .btn-order:active {
+            transform: translateY(-1px);
+        }
+        
+        .btn-order:disabled {
+            opacity: 0.6;
+            transform: none;
+            cursor: not-allowed;
+        }
+
+        .btn-order i {
+            margin-right: 10px;
+        }
+        
+        .product-info {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 25px 30px;
+            border-radius: 15px;
+            margin-bottom: 35px;
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .product-name {
+            font-size: 26px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 8px;
+        }
+        
+        .product-price {
+            font-size: 22px;
+            color: #ffd700;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 25px;
+            color: #6394ff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .back-link i {
+            margin-right: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .back-link:hover {
+            color: #ff919d;
+            text-decoration: none;
+            transform: translateX(-5px);
+        }
+
+        .back-link:hover i {
+            transform: translateX(-3px);
+        }
+        
+        .success-message {
+            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+            border: 2px solid #28a745;
+            color: #155724;
+            padding: 18px 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            display: none;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(40, 167, 69, 0.2);
+        }
+        
+        .error-message {
+            background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+            border: 2px solid #dc3545;
+            color: #721c24;
+            padding: 18px 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            display: none;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(220, 53, 69, 0.2);
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -10px;
+        }
+
+        .col-md-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding: 0 10px;
+        }
+
+        @media (max-width: 768px) {
+            .order-form {
+                padding: 30px 20px;
+                border-radius: 15px;
+            }
+
+            .order-form h2 {
+                font-size: 26px;
+            }
+
+            .col-md-6 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+
+            .product-name {
+                font-size: 22px;
+            }
+
+            .product-price {
+                font-size: 18px;
+            }
+
+            .btn-order {
+                padding: 14px 30px;
+                font-size: 15px;
+            }
+        }
+
+ 
