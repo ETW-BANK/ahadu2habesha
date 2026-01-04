@@ -86,11 +86,10 @@
                         <!-- Order Form using Web3Forms (Guaranteed Working) -->
                         <form id="orderForm" action="https://api.web3forms.com/submit" method="POST">
                             <!-- Hidden fields for Web3Forms -->
-                            <input type="hidden" name="access_key" value="f252607b-2089-4137-85b0-25b7b84a607c">
+                            <input type="hidden" name="access_key" value="7632d455-7b8d-45cc-b052-039d167abbf9">
                             <input type="hidden" name="subject" value="New Order from Ahadu Habesha Website">
                             <input type="hidden" name="from_name" value="Ahadu Habesha Order System">
                             <input type="hidden" name="redirect" value="false">
-                            <input type="hidden" name="email" value="girmatensae18@gmail.com">
                             
                             <!-- Product Information -->
                             <input type="hidden" id="hiddenProductName" name="Product Name">
@@ -105,10 +104,15 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="phone">Phone Number *</label>
-                                        <input type="tel" class="form-control" id="phone" name="Phone Number" required>
+                                        <label for="email">Email Address *</label>
+                                        <input type="email" class="form-control" id="email" name="email" required>
                                     </div>
                                 </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" class="form-control" id="phone" name="Phone Number" required>
                             </div>
                             
                             <!-- Size Selection -->
